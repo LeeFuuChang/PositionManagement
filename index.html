@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js" crossorigin="anonymous"></script>
+
+    <script defer src="position.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <label for="entryPrice">Entry Price</label>
+        <input name="entryPrice" id="entryPrice" type="text" required>
+
+        <label for="stopLossPrice">Stop Loss Price</label>
+        <input name="stopLossPrice" id="stopLossPrice" type="text" required>
+
+        <label for="availableMargin">Available Margin</label>
+        <input name="availableMargin" id="availableMargin" type="text" placeholder="(USDT)" required>
+
+        <label for="maxLeverageAvailable">Max Leverage Available</label>
+        <input name="maxLeverageAvailable" id="maxLeverageAvailable" type="text" value="125" required>
+
+        <label for="maxLeverageAcceptable">Max Leverage Acceptable</label>
+        <input name="maxLeverageAcceptable" id="maxLeverageAcceptable" type="text" value="20" required>
+
+        <label for="maxLossAcceptable">Max Loss Acceptable</label>
+        <input name="maxLossAcceptable" id="maxLossAcceptable" type="text" value="20" required>
+
+        <label for="tradingFeeRate">Trading Fee Rate</label>
+        <input name="tradingFeeRate" id="tradingFeeRate" type="text" value="0.05" required>
+
+        <input id="cross" type="submit" value="Cross Margin">
+        <input id="isolated" type="submit" value="Isolated Margin">
+    </form>
+    <pre></pre>
+</body>
+</html>

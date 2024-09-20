@@ -49,7 +49,8 @@ function CollectOrder(marginType) {
 
     Order.suggestedPositionSize = Order.suggestedMargin*Order.suggestedLeverage;
 
-    Order.finalLoss = round(Order.suggestedPositionSize*(Order.stopLossPriceChange+Order.tradingFeeRate*2), 2);
+    Order.lossAtStopLoss = round(Order.suggestedPositionSize*Order.stopLossPriceChange, 2);
+    Order.totalTradeFee = round(Order.suggestedPositionSize*Order.tradingFeeRate*2, 2);
 
     return Order;
 }
@@ -64,7 +65,7 @@ function FormatOutput(order) {
         `\tLeverage: ${order.suggestedLeverage}\n` +
         `\tMargin: ${order.suggestedMargin}\n` +
         `\tPosition Size: ${order.suggestedPositionSize}\n` +
-        `\tLoss at SL (fee included): ${order.finalLoss}`
+        `\tLoss at SL: ${order.lossAtStopLoss+order.totalTradeFee} (${order.lossAtStopLoss} Loss + ${order.totalTradeFee} Fee)`
     );
 }
 

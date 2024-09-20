@@ -10,7 +10,6 @@ function CollectOrder(marginType) {
         entryPrice: parseFloat($("#entryPrice").val()),
         stopLossPrice: parseFloat($("#stopLossPrice").val()),
         availableMargin: parseFloat($("#availableMargin").val()),
-        maxLeverageAvailable: parseFloat($("#maxLeverageAvailable").val()),
         maxLeverageAcceptable: parseFloat($("#maxLeverageAcceptable").val()),
         maxLossAcceptable: parseFloat($("#maxLossAcceptable").val()),
         tradingFeeRate: parseFloat($("#tradingFeeRate").val()) / 100,
@@ -30,10 +29,7 @@ function CollectOrder(marginType) {
     Order.positionSize = Order.maxLossAcceptable/Order.stopLossPriceChange;
 
     // Cross Margin can use max leverage to utilize funds
-    Order.suggestedLeverage = Math.min(
-        Order.maxLeverageAvailable,
-        Order.maxLeverageAcceptable,
-    );
+    Order.suggestedLeverage = Order.maxLeverageAcceptable;
     if(Order.marginType == "Isolated") {
         // Calculate leverage by 2x loss to set stoploss at 50% to prevent Isolated liq
         Order.suggestedLeverage = Math.min(
@@ -59,8 +55,8 @@ function FormatOutput(order) {
     return (
         "Order Info:\n" +
         `\tEntry Price: ${order.entryPrice}\n` +
-        `\tStopLoss Price: ${order.stopLossPrice}\n` +
-        `\tCost per Risk: ${order.maxLossAcceptable}\n` +
+        `\tStopLoss Price: ${order.stopLossPrice} (${round(Order.direction*Order.stopLossPriceChange, 1)}%)\n` +
+        `\tBreak Even Price: ${Order.breakEvenPrice} (${round(Order.direction*Order.tradingFeeRate*2, 1)}%)\n` +
         `${order.marginType} Margin:\n` +
         `\tLeverage: ${order.suggestedLeverage}\n` +
         `\tMargin: ${order.suggestedMargin}\n` +

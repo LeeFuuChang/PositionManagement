@@ -55,8 +55,8 @@ function FormatOutput(order) {
     return (
         "Order Info:\n" +
         `\tEntry Price: ${order.entryPrice}\n` +
-        `\tStopLoss Price: ${order.stopLossPrice} (${round(Order.direction*Order.stopLossPriceChange, 1)}%)\n` +
-        `\tBreak Even Price: ${Order.breakEvenPrice} (${round(Order.direction*Order.tradingFeeRate*2, 1)}%)\n` +
+        `\tStopLoss Price: ${order.stopLossPrice} (${round(order.direction*order.stopLossPriceChange, 1)}%)\n` +
+        `\tBreak Even Price: ${Order.breakEvenPrice} (${round(order.direction*order.tradingFeeRate*2, 1)}%)\n` +
         `${order.marginType} Margin:\n` +
         `\tLeverage: ${order.suggestedLeverage}\n` +
         `\tMargin: ${order.suggestedMargin}\n` +

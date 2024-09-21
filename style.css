@@ -165,6 +165,7 @@ aside article {
 }
 
 aside article h1 {
+    --direction-color: #E0E2E6;
     border-radius: 1rem;
     display: grid;
     place-items: center;
@@ -175,7 +176,8 @@ aside article h1 {
     font-family: "Ultra", serif;
     letter-spacing: 0.4rem;
     color: #FFFFFF;
-    background-color: #08BE7E;
+    background-color: var(--direction-color);
+    box-shadow: 0 0 1rem var(--direction-color);
 }
 
 aside article h6 {

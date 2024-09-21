@@ -6,35 +6,125 @@
     <title>Document</title>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js" crossorigin="anonymous"></script>
 
     <script defer src="position.js"></script>
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body language="en">
     <form>
-        <label for="entryPrice">Entry Price</label>
-        <input name="entryPrice" id="entryPrice" type="text" required>
-
-        <label for="stopLossPrice">Stop Loss Price</label>
-        <input name="stopLossPrice" id="stopLossPrice" type="text" required>
-
-        <label for="availableMargin">Available Margin</label>
-        <input name="availableMargin" id="availableMargin" type="text" placeholder="(USDT)" required>
-
-        <label for="maxLeverageAcceptable">Max Leverage Acceptable</label>
-        <input name="maxLeverageAcceptable" id="maxLeverageAcceptable" type="text" value="20" required>
-
-        <label for="maxLossAcceptable">Max Loss Acceptable</label>
-        <input name="maxLossAcceptable" id="maxLossAcceptable" type="text" value="20" required>
-
-        <label for="tradingFeeRate">Trading Fee Rate</label>
-        <input name="tradingFeeRate" id="tradingFeeRate" type="text" value="0.05" required>
-
-        <input id="cross" type="button" value="Cross Margin">
-        <input id="isolated" type="button" value="Isolated Margin">
+        <div>
+            <input id="cross" type="button" value="Cross" class="active margin-type lang" lang="crossMargin">
+            <input id="isolated" type="button" value="Isolated" class="margin-type lang" lang="isolatedMargin">
+        </div>
+        <div>
+            <label for="entryPrice">
+                <h2 class="lang" lang="entryPrice"></h2>
+                <input name="entryPrice" id="entryPrice" type="text" required>
+            </label>
+        </div>
+        <div>
+            <label for="stopLossPrice">
+                <h2 class="lang" lang="stopLossPrice"></h2>
+                <input name="stopLossPrice" id="stopLossPrice" type="text" required>
+            </label>
+            <label for="takeProfitPrice">
+                <h2 class="lang" lang="takeProfitPrice"></h2>
+                <input name="takeProfitPrice" id="takeProfitPrice" type="text" required>
+            </label>
+        </div>
+        <div>
+            <label for="availableMargin">
+                <h2 class="lang" lang="availableMargin"></h2>
+                <input name="availableMargin" id="availableMargin" type="text" required>
+            </label>
+        </div>
+        <div>
+            <label for="maxLeverageAcceptable">
+                <h2 class="lang" lang="maxLeverageAcceptable"></h2>
+                <input name="maxLeverageAcceptable" id="maxLeverageAcceptable" type="text" required>
+            </label>
+        </div>
+        <div>
+            <label for="maxLossAcceptable">
+                <h2 class="lang" lang="maxLossAcceptable"></h2>
+                <input name="maxLossAcceptable" id="maxLossAcceptable" type="text" required>
+            </label>
+        </div>
+        <div>
+            <label for="tradingFeeRate">
+                <h2 class="lang" lang="tradingFeeRate"></h2>
+                <input name="tradingFeeRate" id="tradingFeeRate" type="text" value="0.05" required>
+            </label>
+        </div>
+        <button type="button" id="submit">
+            <h2 class="lang" lang="calculatePosition"></h2>
+            <img src="arrow.png" alt="">
+        </button>
+        <a href="#" class="language lang" lang="nextLanguage"></a>
     </form>
-    <pre></pre>
+    <aside>
+        <article>
+            <h1>Long</h1>
+            <table>
+                <thead>
+                    <td colspan="2" class="lang" lang="tradingPlan"></td>
+                </thead>
+                <tbody>
+                    <tr data-name="entryPrice">
+                        <td class="lang" lang="entryPrice"></td>
+                        <td>63000</td>
+                    </tr>
+                    <tr data-name="stopLoss">
+                        <td class="lang" lang="stopLossPrice"></td>
+                        <td>64000 (+1.6%)</td>
+                    </tr>
+                    <tr data-name="takeProfit">
+                        <td class="lang" lang="takeProfitPrice"></td>
+                        <td>61000 (-4.7%)</td>
+                    </tr>
+                    <tr data-name="riskRewardRatio">
+                        <td class="lang" lang="riskRewardRatio"></td>
+                        <td>2.9375 (👌 Okay)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h6><hr></h6>
+            <table>
+                <thead>
+                    <td colspan="2" class="lang" lang="positionManagement"></td>
+                </thead>
+                <tbody>
+                    <tr data-name="leverage">
+                        <td class="lang" lang="leverage"></td>
+                        <td>100</td>
+                    </tr>
+                    <tr data-name="margin">
+                        <td class="lang" lang="margin"></td>
+                        <td>12.8</td>
+                    </tr>
+                    <tr data-name="positionSize">
+                        <td class="lang" lang="positionSize"></td>
+                        <td>1280</td>
+                    </tr>
+                    <tr data-name="lossAtStopLoss">
+                        <td class="lang" lang="lossAtStopLoss"></td>
+                        <td>20 + 1.28 Fee</td>
+                    </tr>
+                    <tr data-name="breakEvenPrice">
+                        <td class="lang" lang="breakEvenPrice"></td>
+                        <td>62937 (-0.1%)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h6><hr></h6>
+            <p id="suggestion">不要隨意移動你的止損，因為止損後，你會認為是你調整了的問題，不服氣，重開一單，再次止損</p>
+            <button>
+                <img src="download.png" alt="">
+                <h2 class="lang" lang="saveResult"></h2>
+            </button>
+        </article>
+    </aside>
 </body>
 </html>

@@ -1,12 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu Mono", monospace;
+}
+
+html, body {
+    padding: 1.5rem;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
 form {
+    border-radius: 1rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex: 2;
+    max-width: 36rem;
+    height: 100%;
+    max-height: 40rem;
+    border: 0.1rem solid #E0E2E6;
 }
 
-input {
-    margin-bottom: 1rem;
+form>div {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
 }
 
-input[type="submit"] {
-    margin-top: 1rem;
+
+form>div:nth-child(1) {
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 0.25rem;
+    height: 3rem;
+    background-color: #E0E2E6;
+}
+form>div:nth-child(1) input {
+    border-radius: 0.25rem;
+    flex: 1;
+    height: 2.5rem;
+    font-size: 1rem;
+    color: #000000;
+    letter-spacing: 0.4rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    transition: 0.3s;
+}
+form>div:nth-child(1) input:hover {
+    cursor: pointer;
+}
+form>div:nth-child(1) input.active {
+    background-color: #FFFFFF;
+}
+
+form>div label {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.5rem;
+}
+
+form>div label h2 {
+    width: 100%;
+    height: 1rem;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    color: #000000;
+}
+form>div label input {
+    border-radius: 0.5rem;
+    padding: 0 0.5rem;
+    width: 100%;
+    height: 2rem;
+    font-size: 0.875rem;
+    letter-spacing: 0.1rem;
+    color: #000000;
+    outline: none;
+    border: 0.1rem solid #E0E2E6;
+    transition: 0.3s;
+}
+form>div label input:focus {
+    border-color: #767676;
+}
+
+form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 3rem;
+    border: none;
+    outline: none;
+    background-color: #5956E5;
+    transition: 0.3s;
+}
+form button:hover {
+    cursor: pointer;
+    filter: brightness(.9);
+}
+form button h2 {
+    color: #FFFFFF;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+
+}
+form button img {
+    height: 1rem;
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(318deg) brightness(102%) contrast(101%);
+}
+
+form a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 1rem;
+    font-size: 0.875rem;
+    letter-spacing: 0.2rem;
+}
+
+aside {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: grid;
+    place-items: center;
+    flex: 1;
+    max-width: 24rem;
+    height: 100%;
+    max-height: 40rem;
+    background-color: #E0E2E6;
+}
+
+aside article {
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    max-width: 21rem;
+    height: 100%;
+    max-height: 36rem;
+    background-color: #FFFFFF;
+}
+
+aside article h1 {
+    border-radius: 1rem;
+    display: grid;
+    place-items: center;
+    width: 10rem;
+    height: 2rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    font-family: "Ultra", serif;
+    letter-spacing: 0.4rem;
+    color: #FFFFFF;
+    background-color: #08BE7E;
+}
+
+aside article h6 {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 1.5rem;
+}
+aside article h6::before,
+aside article h6::after {
+    position: absolute;
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #E0E2E6;
+}
+aside article h6::before {
+    left: 0;
+    transform: translateX(-150%);
+}
+aside article h6::after {
+    right: 0;
+    transform: translateX(150%);
+}
+aside article h6 hr {
+    width: 100%;
+    height: 0.1rem;
+    border: none;
+    background-image: linear-gradient(to right, #767676 33%, rgba(255, 255, 255, 0) 0%);
+    background-position: -0.2rem bottom;
+    background-size: 1rem 100%;
+    background-repeat: repeat-x;
+}
+
+aside article table {
+    width: 100%;
+    border-collapse: collapse;
+}
+aside article table td {
+    height: 1.25rem;
+    font-size: 0.875rem;
+    letter-spacing: 0.1rem;
+}
+aside article table td:nth-child(1) {
+    text-align: left;
+}
+aside article table td:nth-child(2) {
+    text-align: right;
+}
+aside article table thead td {
+    height: 1.75rem;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    color: #5956E5;
+}
+aside article table tbody {
+    width: 100%;
+}
+aside article p {
+    width: 100%;
+    color: #767676;
+    text-align: center;
+    text-wrap: wrap;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.1rem;
+}
+
+aside article button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.25rem;
+    width: 100%;
+    height: 2rem;
+    outline: none;
+    border: 0.1rem solid #E0E2E6;
+    background-color: transparent;
+    transition: 0.3s;
+}
+aside article button:hover {
+    border-width: 0.2rem;
+    cursor: pointer;
+    filter: brightness(0.9);
+}
+aside article button img {
+    height: 1rem;
+    filter: invert(55%) sepia(0%) saturate(21%) hue-rotate(160deg) brightness(83%) contrast(85%);
+}
+aside article button h2 {
+    color: #767676;
+    font-size: 0.875rem;
+    letter-spacing: 0.1rem;
 }

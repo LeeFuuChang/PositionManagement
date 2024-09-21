@@ -1,8 +1,3 @@
-const Colors = {
-    "long": "#32D993",
-    "short": "#FF707E",
-};
-
 const Language = {
     "crossMargin": {
         "en": "Cross",
@@ -83,15 +78,6 @@ const Language = {
     "saveResult": {
         "en": "Save",
         "zh": "儲存",
-    },
-
-    "long": {
-        "en": "Long",
-        "zh": "做多",
-    },
-    "short": {
-        "en": "Short",
-        "zh": "做空",
     },
 };
 const Suggestions = [
@@ -225,15 +211,14 @@ $(function(){
             "lossAtStopLoss": `${order.lossAtStopLoss} + ${order.totalTradeFee} Fee`,
             "breakEvenPrice": `${order.breakEvenPrice} (${round(order.direction*order.tradingFeeRate*2*100, 1)}%)`,
         };
-        const direction = {
-            "-1": "short",
-            "1": "long",
-        };
         Object.keys(output).forEach(key=>{
             $(`article tr[data-name="${key}"] td`).last().text(output[key]);
             $("article h1")
-                .text(Language[direction[`${order.direction}`]][$("body").attr("language")])
-                .css("--direction-color", Colors[direction[`${order.direction}`]]);
+                .text(order.direction > 0 ? "LONG" : "SHORT")
+                .css("background-color", order.direction > 0 ? "#32D993" : "#FF707E");
+        });
+        html2canvas($("aside").get(0)).then(canvas=>{
+            $("#save").attr("href", canvas.toDataURL("image/png"));
         });
     });
     $("a.language").on("click", ()=>{

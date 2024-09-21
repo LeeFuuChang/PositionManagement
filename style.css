@@ -165,7 +165,6 @@ aside article {
 }
 
 aside article h1 {
-    --direction-color: #E0E2E6;
     border-radius: 1rem;
     display: grid;
     place-items: center;
@@ -176,8 +175,7 @@ aside article h1 {
     font-family: "Ultra", serif;
     letter-spacing: 0.2rem;
     color: #FFFFFF;
-    background-color: var(--direction-color);
-    box-shadow: 0 0 1rem var(--direction-color);
+    background-color: #E0E2E6;
 }
 
 aside article h6 {
@@ -249,7 +247,7 @@ aside article p {
     letter-spacing: 0.1rem;
 }
 
-aside article button {
+aside article a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -261,17 +259,18 @@ aside article button {
     border: 0.1rem solid #E0E2E6;
     background-color: transparent;
     transition: 0.3s;
+    text-decoration: none;
 }
-aside article button:hover {
+aside article a:hover {
     border-width: 0.2rem;
     cursor: pointer;
     filter: brightness(0.9);
 }
-aside article button img {
+aside article a img {
     height: 1rem;
     filter: invert(55%) sepia(0%) saturate(21%) hue-rotate(160deg) brightness(83%) contrast(85%);
 }
-aside article button h2 {
+aside article a h2 {
     color: #767676;
     font-size: 0.875rem;
     letter-spacing: 0.1rem;

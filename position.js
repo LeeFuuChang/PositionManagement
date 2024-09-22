@@ -199,6 +199,8 @@ $(function(){
         $(this).addClass("active").siblings().removeClass("active");
     });
     $("#submit").on("click", ()=>{
+        $("aside").css("display", "flex");
+        $("article").css("top", "200%");
         let order = CollectOrder($(".margin-type.active").val());
         let output = {
             "entryPrice": `${order.entryPrice}`,
@@ -220,6 +222,11 @@ $(function(){
         html2canvas($("aside").get(0)).then(canvas=>{
             $("#save").attr("href", canvas.toDataURL("image/png"));
         });
+        $("article").animate({"top":"0%"}, 300);
+    });
+    $("aside").on("click", (e)=>{
+        if(e.currentTarget != e.target) return;
+        $("aside").css("display", "none");
     });
     $("a.language").on("click", ()=>{
         let languages = ["en", "zh"];

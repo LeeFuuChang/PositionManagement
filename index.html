@@ -24,41 +24,41 @@
         <div>
             <label for="entryPrice">
                 <h2 class="lang" lang="entryPrice"></h2>
-                <input name="entryPrice" id="entryPrice" type="number" inputmode="numeric" required>
+                <input name="entryPrice" id="entryPrice" type="number" min="0" inputmode="numeric" required>
             </label>
         </div>
         <div>
             <label for="stopLossPrice">
                 <h2 class="lang" lang="stopLossPrice"></h2>
-                <input name="stopLossPrice" id="stopLossPrice" type="number" inputmode="numeric" required>
+                <input name="stopLossPrice" id="stopLossPrice" type="number" min="0" inputmode="numeric" required>
             </label>
             <label for="takeProfitPrice">
                 <h2 class="lang" lang="takeProfitPrice"></h2>
-                <input name="takeProfitPrice" id="takeProfitPrice" type="number" inputmode="numeric" required>
+                <input name="takeProfitPrice" id="takeProfitPrice" type="number" min="0" inputmode="numeric" required>
             </label>
         </div>
         <div>
             <label for="availableMargin">
                 <h2 class="lang" lang="availableMargin"></h2>
-                <input name="availableMargin" id="availableMargin" type="number" inputmode="numeric" required>
+                <input name="availableMargin" id="availableMargin" type="number" min="0" inputmode="numeric" required>
             </label>
         </div>
         <div>
             <label for="maxLeverageAcceptable">
                 <h2 class="lang" lang="maxLeverageAcceptable"></h2>
-                <input name="maxLeverageAcceptable" id="maxLeverageAcceptable" type="number" inputmode="numeric" required>
+                <input name="maxLeverageAcceptable" id="maxLeverageAcceptable" type="number" min="1" inputmode="numeric" required>
             </label>
         </div>
         <div>
             <label for="maxLossAcceptable">
                 <h2 class="lang" lang="maxLossAcceptable"></h2>
-                <input name="maxLossAcceptable" id="maxLossAcceptable" type="number" inputmode="numeric" required>
+                <input name="maxLossAcceptable" id="maxLossAcceptable" type="number" min="0" inputmode="numeric" required>
             </label>
         </div>
         <div>
             <label for="tradingFeeRate">
                 <h2 class="lang" lang="tradingFeeRate"></h2>
-                <input name="tradingFeeRate" id="tradingFeeRate" type="number" value="0.05" inputmode="numeric" required>
+                <input name="tradingFeeRate" id="tradingFeeRate" type="number" value="0.05" min="0.02" step="0.005" inputmode="numeric" required>
             </label>
         </div>
         <button type="button" id="submit">

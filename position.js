@@ -40,11 +40,11 @@ const Language = {
         "zh": "入場價",
     },
     "stopLossPrice": {
-        "en": "Stop Loss",
+        "en": "SL Price",
         "zh": "止損價",
     },
     "takeProfitPrice": {
-        "en": "Take Profit",
+        "en": "TP Price",
         "zh": "止盈價",
     },
     "riskRewardRatio": {
@@ -68,11 +68,11 @@ const Language = {
         "zh": "倉位大小",
     },
     "lossAtStopLoss": {
-        "en": "Loss At Stop Loss",
+        "en": "SL Loss",
         "zh": "止損損失",
     },
     "breakEvenPrice": {
-        "en": "Break Even Price",
+        "en": "BE Price",
         "zh": "平衡套保價",
     },
     "saveResult": {

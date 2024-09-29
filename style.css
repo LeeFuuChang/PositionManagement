@@ -1,6 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
 
+@font-face {
+    font-family: "Binance Flex";
+    src: url("https://bin.bnbstatic.com/static/fonts/bp/BinancePlex-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Binance Flex";
+    src: url("https://bin.bnbstatic.com/static/fonts/bp/BinancePlex-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Binance Flex";
+    src: url("https://bin.bnbstatic.com/static/fonts/bp/BinancePlex-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Binance Flex";
+    src: url("https://bin.bnbstatic.com/static/fonts/bp/BinancePlex-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+}
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -285,6 +310,134 @@ aside article a h2 {
     font-size: 0.875rem;
     letter-spacing: 0.1rem;
 }
+
+
+#PNL h1 {
+    font-weight: 600;
+}
+#PNL h2 {
+    font-weight: 500;
+}
+#PNL h3 {
+    font-weight: 400;
+}
+#PNL h4 {
+    font-weight: 300;
+}
+
+#PNL {
+    position: relative;
+    display: block;
+    padding: 30px 50px 0 50px;
+    width: 580px;
+    height: 326px;
+    font-family: "Binance Flex", monospace;
+}
+
+#PNL img.background {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#PNL img.banner {
+    width: min-content;
+    height: 24px;
+    object-fit: contain;
+}
+
+#PNL div:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    height: 20px;
+    margin-top: 34px;
+}
+#PNL div:nth-of-type(1) h2 {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #EAECEF;
+}
+#PNL div:nth-of-type(1) h2:nth-child(1) {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #2EBD85;
+}
+#PNL div:nth-of-type(1) span {
+    width: 1px;
+    height: 16px;
+    background-color: #474D57;
+}
+
+#PNL div:nth-of-type(2) {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 56px;
+}
+#PNL div:nth-of-type(2) h1 {
+    font-size: 48px;
+    color: #2EBD85;
+}
+
+#PNL div:nth-of-type(3) {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto 1fr;
+    gap: 2px 16px;
+    margin-top: 4px;
+    width: 100%;
+    height: 44px;
+}
+#PNL div:nth-of-type(3) h2:nth-child(1),
+#PNL div:nth-of-type(3) h2:nth-child(3) {
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #B7BDC6;
+}
+#PNL div:nth-of-type(3) h2:nth-child(2),
+#PNL div:nth-of-type(3) h2:nth-child(4) {
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #F0B90B;
+}
+
+#PNL div:nth-of-type(4) {
+    display: grid;
+    align-items: center;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto 1fr;
+    column-gap: 12px;
+    width: 100%;
+    height: 56px;
+    margin-top: 34px;
+}
+#PNL div:nth-of-type(4) img {
+    grid-row: 1 / 3;
+    width: 56px;
+    height: 56px;
+    border: 4px solid #FFFFFF;
+}
+#PNL div:nth-of-type(4) h3 {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #B7BDC6;
+}
+#PNL div:nth-of-type(4) h1 {
+    font-size: 24px;
+    color: #EAECEF;
+}
+
 
 @media (min-width: 320px) and (max-width: 1080px) {
     aside {

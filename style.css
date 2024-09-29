@@ -1,30 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
-
-@font-face {
-    font-family: "Binance Flex";
-    src: url("https://bin.bnbstatic.com/static/fonts/bp/BinancePlex-Light.woff2") format("woff2");
-    font-weight: 300;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Binance Flex";
-    src: url("https://bin.bnbstatic.com/static/fonts/bp/BinancePlex-Regular.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Binance Flex";
-    src: url("https://bin.bnbstatic.com/static/fonts/bp/BinancePlex-Medium.woff2") format("woff2");
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Binance Flex";
-    src: url("https://bin.bnbstatic.com/static/fonts/bp/BinancePlex-SemiBold.woff2") format("woff2");
-    font-weight: 600;
-    font-style: normal;
-}
+@import url("fonts/binance.css");
 
 *, *::before, *::after {
     margin: 0;

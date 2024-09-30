@@ -290,15 +290,19 @@ aside article a h2 {
 
 #PNL h1 {
     font-weight: 600;
+    font-family: "Binance Flex", monospace;
 }
 #PNL h2 {
     font-weight: 500;
+    font-family: "Binance Flex", monospace;
 }
 #PNL h3 {
     font-weight: 400;
+    font-family: "Binance Flex", monospace;
 }
 #PNL h4 {
     font-weight: 300;
+    font-family: "Binance Flex", monospace;
 }
 
 #PNL {
@@ -307,7 +311,6 @@ aside article a h2 {
     padding: 30px 50px 0 50px;
     width: 580px;
     height: 326px;
-    font-family: "Binance Flex", monospace;
 }
 
 #PNL img.background {
